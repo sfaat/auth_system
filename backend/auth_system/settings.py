@@ -86,12 +86,14 @@ WSGI_APPLICATION = 'auth_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'auth_system',
-        'USER': 'postgres',
-        'PASSWORD': '[YOUR DATABASE PASSWORD]',
+        'NAME': 'mydb',
+        'USER': 'sfaathusain',
+        'PASSWORD': 'root',
         'HOST': 'localhost'
     }
 }
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -200,3 +202,6 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
 }
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

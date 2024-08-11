@@ -18,7 +18,7 @@ const Facebook = ({ facebookAuthenticate }) => {
         if (state && code) {
             facebookAuthenticate(state, code);
         }
-    }, [location]);
+    }, [location,facebookAuthenticate]);
 
     return (
         <div className='container'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signup } from '../actions/auth';
 import axios from 'axios';
@@ -30,7 +30,7 @@ const Signup = ({ signup, isAuthenticated }) => {
     const continueWithGoogle = async () => {
         try {
             const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/o/google-oauth2/?redirect_uri=${process.env.REACT_APP_API_URL}/google`)
-
+            print
             window.location.replace(res.data.authorization_url);
         } catch (err) {
 
@@ -48,10 +48,10 @@ const Signup = ({ signup, isAuthenticated }) => {
     };
 
     if (isAuthenticated) {
-        return <Redirect to='/' />
+        return <Navigate to='/' />
     }
     if (accountCreated) {
-        return <Redirect to='/login' />
+        return <Navigate to='/login' />
     }
 
     return (

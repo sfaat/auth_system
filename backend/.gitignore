@@ -141,8 +141,8 @@ pythonenv*
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
+.dmypy.jsxon
+dmypy.jsxon
 
 # Pyre type checker
 .pyre/
