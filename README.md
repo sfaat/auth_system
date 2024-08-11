@@ -45,6 +45,7 @@ SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
 - Django 3.x or 4.x
 - Django REST Framework
 - Djoser
+- react Js
 
 ## Setup Instructions
 
